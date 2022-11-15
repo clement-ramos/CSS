@@ -1,0 +1,53 @@
+/*Palette
+color:#C8C8C8
+color:#38444B
+color:#5764DD
+color:#F8F9FB
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    font-family: 'Oswald', sans-serif;
+}
+body {
+    background-color:#38444B;
+}
+h1 {
+    font-size: 72px;
+    font-family: 'Oswald', sans-serif;
+    margin: 10px auto;
+}
+h2 {
+    font-size: 32px;
+    font-family: 'Oswald', sans-serif;
+}
+a{
+    z-index: 10;
+    color: #38444B
+}
+.content {
+    border-radius: 20px;
+    background-color: #5764DD;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 5% 10%;
+}
+/*##################################################*/
+.left{
+    border-radius: 20px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    color :#F8F9FB; 
+}
+/*##################################################*/
+.right {
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F9FB;
+}

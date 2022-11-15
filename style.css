@@ -1,0 +1,145 @@
+/*Palette
+color:#C8C8C8
+color:#38444B
+color:#5764DD
+color:#F8F9FB
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    font-family: 'Oswald', sans-serif;
+}
+body {
+    background-color: #38444B;
+}
+h1 {
+    z-index: 300;
+    font-size: 72px;
+    font-family: 'roboto', sans-serif;
+    margin: 10px auto;
+    color: transparent;
+
+    webkit-text-stroke: 1px black;
+    background: url(images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back{
+    100%{
+        background-position: 1000px 0;
+    }
+}
+h2 {
+    font-size: 32px;
+    font-family: 'Oswald', sans-serif;
+}
+a{
+    z-index: 10;
+    color: #38444B
+}
+.content {
+    border-radius: 20px;
+    background-color: #5764DD;
+    display: flex;
+    flex-direction: row;
+    margin: 5% 10%;
+}
+/*##################################################*/
+.left{
+    display: flex;
+    flex-direction: column;
+    color :#F8F9FB; 
+}
+.left #logo {
+    margin: 10% 20px 10% 70px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    
+}
+.contact .links {
+    display: flex;
+    flex-direction: row;
+}
+/*##################################################*/
+.right {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F9FB;
+    padding: 0% 150px;
+}
+.info {
+    margin: 10%;
+}
+/*Images*/
+#profil {  
+    width: 300px;
+    height: auto;
+    margin: 0 -150px 0 150px;
+    overflow: visible;
+    border-radius: 10px;
+    transition: .8s;
+}
+#profil:hover {
+    border-radius: 200px;
+    cursor:pointer;
+    color:black;
+}
+#logo {
+    width: 80px;
+    height: auto;
+    background-color: #F8F9FB;
+    border-radius: 5px;
+}
+/*animation du btn*/
+.btn {
+    border-radius: 10px;
+    background:transparent;
+    padding:12px 24px;
+    border:solid 2px #38444B;
+    display:inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: all .4s;
+    z-index: 2;
+    background-color: #F8F9FB;
+    color: #F8F9FB;
+  }
+
+  /* EXPLICATION des pseudo éléments (before & after) */
+  /* ils permettent la création d'un objet ayant les mêmes propriété qu'une balise HTML */
+  /* Sans pour autant a avoir a polué le code html avec des balises vides de type span */
+  /* sans display ou autre ils auront tendance a se mettre les un au dessous des autres  */
+  /* ils faut donc mettre le parent en poston relative et l'enfant en absolute pour toutes les utlisations qui requiert une supperposition */
+  .btn:before {
+    content:'';
+    position:absolute;
+    z-index: -1;
+    background:#5764DD;
+    left:-12px;
+    top:-12px;
+    width:0%;
+    height:calc(100% + 24px);
+    transition: all .4s;
+    /* le skew permet une rotation de l'objet il faut donc gerer sa position avec left dans right ainsi que augmenter sa longueur */
+    transform: skew(24deg);
+    color: #38444B;
+  }
+  
+  .btn:hover:before {
+    width:calc(100% + 24px);
+  }
+  .btn:hover {
+    cursor:pointer;
+    color:black;
+  }
+
+

@@ -99,8 +99,14 @@ a{
     background-color: #F8F9FB;
     border-radius: 5px;
 }
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
 /*animation du btn*/
 .btn {
+    margin: 0 20px;
     border-radius: 10px;
     background:transparent;
     padding:12px 24px;
